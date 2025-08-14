@@ -1,12 +1,13 @@
 # Start from Node.js.
 FROM node:24
 
-# Install dependencies for act to run github action locally.
+# Install dependencies including nvim.
 RUN apt-get update && apt-get install -y \
   curl \
   unzip \
   git \
   docker.io \
+  neovim \
   && rm -rf /var/lib/apt/lists/*
 
 # Install act.
