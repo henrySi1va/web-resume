@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
   unzip \
   git \
   docker.io \
-  && rm-rf /var/lib/apt/lists/*
+  && rm -rf /var/lib/apt/lists/*
 
 # Install act.
 RUN curl -s https://api.github.com/repos/nektos/act/releases/latest \
