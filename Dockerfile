@@ -10,20 +10,14 @@ RUN apt-get update && apt-get install -y \
   && rm -rf /var/lib/apt/lists/*
 
 # Install act.
-RUN curl -s https://api.github.com/repos/nektos/act/releases/latest \
-  | grep "browser_download_url.*Linux_x86_64.tar.gz" \
-  | cut -d '"' -f 4 \
-  | wget -qi - \
-  && tar -xf act_*_Linux_x86_64.tar.gz \
-  && mv act /usr/local/bin/ \
-  && rm act_*_Linux_x86_64.tar.gz
+RUN curl https://raw.githubusercontent.com/nektos/act/master/install.sh | sudo bash
 
-# Set working directory
+# Set working directory.
 WORKDIR /workspace
 
 # Expose port to allow connection to dev instance.
 EXPOSE 3000
 
-# Default shell
+# Default shell.
 CMD [ "bash" ]
 
