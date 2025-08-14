@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
   && rm -rf /var/lib/apt/lists/*
 
 # Install act.
-RUN curl https://raw.githubusercontent.com/nektos/act/master/install.sh | sudo bash
+RUN curl https://raw.githubusercontent.com/nektos/act/master/install.sh | bash
 
 # Set working directory.
 WORKDIR /workspace
