@@ -19,6 +19,9 @@ WORKDIR /workspace
 # Expose port to allow connection to dev instance.
 EXPOSE 3000
 
+# Trust git repo in workspace directory.
+RUN git config --global --add safe.directory '/workspace'
+
 # Default shell.
 CMD [ "bash" ]
 
