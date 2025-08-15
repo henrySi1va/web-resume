@@ -8,6 +8,7 @@ services:
       - .:/workspace
       - /var/run/docker.sock:/var/run/docker.sock # For act to run Docker
       - ~/.ssh:/root/.ssh:ro # To share ssh credentials for git
+      - ~/.config/nvim:/root/.config/nvim # Share nvim config
     stdin_open: true
     tty: true
 
