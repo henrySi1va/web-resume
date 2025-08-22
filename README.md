@@ -18,7 +18,8 @@ docker compose up
 
 You can connect to the container with the development tool of your choice.
 `neovim` is installed with a link to the hosts `.config/nvim` so that any configuration is shared with the container.
-The dev server is run on port `3000` and can be started with:
+
+The dev server is run on port `3000` and by running the following in the `web-resume` directory:
 
 ```
 npm run dev
